@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- Default: HTTPS only for all connections -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tile.openstreetmap.org</domain>
+        <domain includeSubdomains="true">demotiles.maplibre.org</domain>
+        <domain includeSubdomains="true">nominatim.openstreetmap.org</domain>
+        <!-- ADD THIS -->
+        <domain includeSubdomains="true">basemaps.cartocdn.com</domain>
+    </domain-config>
+
+</network-security-config>
+

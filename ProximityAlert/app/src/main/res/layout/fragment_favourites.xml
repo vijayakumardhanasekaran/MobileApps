@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#12151C"
+    android:paddingBottom="24dp">
+
+    <!-- Handle bar -->
+    <View
+        android:layout_width="40dp" android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp" android:layout_marginBottom="16dp"
+        android:background="#3A3F50"/>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="⭐  Saved Locations"
+        android:textColor="#E8ECF4" android:textSize="16sp" android:textStyle="bold"
+        android:paddingHorizontal="20dp" android:paddingBottom="12dp"/>
+
+    <!-- Divider -->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#1F2535"/>
+
+    <!-- Empty state -->
+    <TextView android:id="@+id/tvFavouritesEmpty"
+        android:layout_width="match_parent" android:layout_height="80dp"
+        android:gravity="center"
+        android:text="No saved locations yet.\nDrop a pin and tap Save below."
+        android:textColor="#5A6278" android:textSize="13sp"
+        android:visibility="gone"/>
+
+    <!-- List -->
+    <ListView android:id="@+id/listFavourites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="320dp"
+        android:scrollbars="none"
+        android:divider="#1F2535"
+        android:dividerHeight="1dp"/>
+
+    <!-- Divider -->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#1F2535" android:layout_marginTop="8dp"/>
+
+    <!-- Save current target -->
+    <Button android:id="@+id/btnSaveCurrentTarget"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp" android:layout_marginTop="12dp"
+        android:text="＋  Save Current Target as Favourite"
+        android:textSize="13sp"
+        android:backgroundTint="#1C2A1C"
+        android:textColor="#00C896"/>
+
+</LinearLayout>
